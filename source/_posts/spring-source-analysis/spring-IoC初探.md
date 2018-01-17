@@ -25,3 +25,7 @@ Person person1 = applicationContext.getBean("person1", Person.class);
 让我们看一下 `ClassPathXmlApplicationContext` 这个类的继承层次：
 
 ![ClassPathXmlApplicationContext type hierachy](spring-IoC初探/type-hierachy.png)
+
+几个关键的类的作用
+- BeanFactory
+- ListableBeanFacotry
