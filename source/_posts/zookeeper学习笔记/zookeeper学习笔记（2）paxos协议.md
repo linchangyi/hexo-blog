@@ -4,6 +4,8 @@ date: 2018-01-18 16:50:04
 tags: zookeeper学习笔记
 categories: 技术
 ---
+> [Paxos Made Simple](https://lamport.azurewebsites.net/pubs/paxos-simple.pdf)
+
 <!-- more -->
 > 摘自 [Paxos Made Simple论文翻译](https://www.jianshu.com/p/6d01a8d2df9f)
 
