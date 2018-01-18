@@ -29,6 +29,8 @@ categories: 技术
     相对于硬状态，存在中间状态
 - Eventually consistent，最终一致性
 
+---
+
 # 一致性协议
 ## 2PC与3PC
 角色：参与者，协调者
