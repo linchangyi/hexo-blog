@@ -4,10 +4,10 @@ date: 2018-01-18 16:50:04
 tags: zookeeper学习笔记
 categories: 技术
 ---
-> [Paxos Made Simple](https://lamport.azurewebsites.net/pubs/paxos-simple.pdf)
+> 原文 [Paxos Made Simple](https://lamport.azurewebsites.net/pubs/paxos-simple.pdf)
+摘自 [Paxos Made Simple论文翻译](https://www.jianshu.com/p/6d01a8d2df9f)
 
 <!-- more -->
-> 摘自 [Paxos Made Simple论文翻译](https://www.jianshu.com/p/6d01a8d2df9f)
 
 【这篇论文我翻一下来，首先感觉还是不好懂，很多地方结论的得出不够清楚，需要读者自己思考其中的原因。要理解Paxos算法，个人建议先搜索下介绍算法的中文文章，大致了解下Paxos算法要做什么，然后就再读下论文，应该会有所感悟。】
 
