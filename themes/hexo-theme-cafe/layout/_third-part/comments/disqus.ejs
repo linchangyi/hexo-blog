@@ -9,6 +9,12 @@
     dsq.type = 'text/javascript';
     dsq.async = true;
     dsq.src = '//' + disqus_shortname + '.disqus.com/<% if (page.comments) { %>embed.js<% } else { %>count.js<% } %>';
+
+    var p = document.createElement('p');
+    p.innerHTML = "评论需翻墙。";
+    p.setAttribute("class","article-nav-caption");
+    document.getElementById("disqus_thread").appendChild(p);
+
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
