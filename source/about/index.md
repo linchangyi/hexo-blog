@@ -1,2 +1,2 @@
 
-*归去来兮，JUST DO IT。*
+*归去来兮，Just Do IT。*
