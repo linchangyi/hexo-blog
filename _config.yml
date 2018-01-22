@@ -77,3 +77,5 @@ server:
   port: 7001
   compress: true
   header: true
+
+hosted_by_coding_pages: true
