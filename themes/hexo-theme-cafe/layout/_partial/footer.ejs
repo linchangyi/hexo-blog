@@ -5,12 +5,12 @@
   <div class="outer">
     <div id="footer-left">
       &copy; 2014 - <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %>
-      <% if (config.hosted_by_coding_pages){ %>
-        &nbsp;|&nbsp;Hosted by Coding Pages
-      <% } %>
     </div>
      <div id="footer-right">
       <%= __('contact') %>&nbsp;|&nbsp;<%= config.email || theme.email  || config.url %>
+      <% if (config.hosted_by_coding_pages){ %>
+        <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+      <% } %>
     </div>
   </div>
 </footer>
