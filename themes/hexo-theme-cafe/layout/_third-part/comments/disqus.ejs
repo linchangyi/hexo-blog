@@ -5,11 +5,15 @@
   var disqus_url = '<%= page.permalink %>';
   <% } %>
   (function(){
-    var p = document.createElement('p');
-    p.innerHTML = "评论需翻墙 👈";
-    p.setAttribute("class","article-nav-caption");
-    document.getElementById("disqus_thread").setAttribute("align","center");
-    document.getElementById("disqus_thread").appendChild(p);
+
+    if(document.getElementById("disqus_thread")!=null){
+      var p = document.createElement('p');
+      p.innerHTML = "评论需翻墙 👈";
+      p.setAttribute("class","article-nav-caption");
+      
+      document.getElementById("disqus_thread").setAttribute("align","center");
+      document.getElementById("disqus_thread").appendChild(p);
+    }
 
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
