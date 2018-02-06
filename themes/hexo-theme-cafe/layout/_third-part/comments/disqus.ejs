@@ -5,29 +5,31 @@
   var disqus_url = '<%= page.permalink %>';
   <% } %>
   (function(){
-    document.getElementById("disqus_thread").setAttribute("align","center");
+    if(document.getElementById("disqus_thread")!=null){
+      document.getElementById("disqus_thread").setAttribute("align","center");
 
-    var loading = document.createElement('img');
-    loading.src = "/images/comment_loading.gif";
-    document.getElementById("disqus_thread").appendChild(loading);
+      var loading = document.createElement('img');
+      loading.src = "/images/comment_loading.gif";
+      document.getElementById("disqus_thread").appendChild(loading);
 
-    $.ajax({
-      url:'//' + disqus_shortname + '.disqus.com/<% if (page.comments) { %>embed.js<% } else { %>count.js<% } %>',
-      timeout: 2000,
-      success: function(data){
-        var dsq = document.createElement('script');
-        dsq.type = 'text/javascript';
-        dsp.innerHTML=data;
-        (document.getElementsByTagName('body')[0]).appendChild(dsq);
-      },
-      error: function(){
-        var p = document.createElement('p');
-        p.innerHTML = "评论需翻墙 👈";
-        p.setAttribute("class","article-nav-caption");
-        document.getElementById("disqus_thread").removeChild(loading);
-        document.getElementById("disqus_thread").appendChild(p);
-      }
-    });
+      $.ajax({
+        url:'//' + disqus_shortname + '.disqus.com/<% if (page.comments) { %>embed.js<% } else { %>count.js<% } %>',
+        timeout: 2000,
+        success: function(data){
+          var dsq = document.createElement('script');
+          dsq.type = 'text/javascript';
+          dsp.innerHTML=data;
+          (document.getElementsByTagName('body')[0]).appendChild(dsq);
+        },
+        error: function(){
+          var p = document.createElement('p');
+          p.innerHTML = "评论需翻墙 👈";
+          p.setAttribute("class","article-nav-caption");
+          document.getElementById("disqus_thread").removeChild(loading);
+          document.getElementById("disqus_thread").appendChild(p);
+        }
+      });
+    }
   })();
 </script>
 <% } %>
