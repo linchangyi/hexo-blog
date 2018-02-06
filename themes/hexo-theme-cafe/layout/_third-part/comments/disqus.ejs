@@ -8,8 +8,10 @@
     if(document.getElementById("disqus_thread")!=null){
       document.getElementById("disqus_thread").setAttribute("align","center");
 
-      var loading = document.createElement('img');
-      loading.src = "/images/comment_loading.gif";
+      var loading = document.createElement('div');
+      loading.setAttribute("style","height:17px;");
+      loading.innerHTML = '<img id="loading_gif" src="/images/comment_loading.gif"/>';
+
       document.getElementById("disqus_thread").appendChild(loading);
 
       $.ajax({
@@ -22,11 +24,7 @@
           (document.getElementsByTagName('body')[0]).appendChild(dsq);
         },
         error: function(){
-          var p = document.createElement('p');
-          p.innerHTML = "评论需翻墙 👈";
-          p.setAttribute("class","article-nav-caption");
-          document.getElementById("disqus_thread").removeChild(loading);
-          document.getElementById("disqus_thread").appendChild(p);
+          loading.innerHTML='<font style="color:grey;">Oops! Comments blocked by GFW. 👈</font>';
         }
       });
     }
