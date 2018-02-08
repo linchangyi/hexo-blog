@@ -13,16 +13,14 @@
       loading.innerHTML = '<img id="loading_gif" src="/images/comment_loading.gif"/>';
       document.getElementById("disqus_thread").appendChild(loading);
 
-      setTimeout(function(){
-        loading.innerHTML='<font style="color:LightGray;">👉 评论请翻墙！</font>';
-      },2000);
-
-      var dsq = document.createElement('script');
-      dsq.type = 'text/javascript';
-      dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/<% if (page.comments) { %>embed.js<% } else { %>count.js<% } %>';
-      document.getElementsByTagName('body')[0].appendChild(dsq);
-
+      $.ajax({
+        url:'//' + disqus_shortname + '.disqus.com/<% if (page.comments) { %>embed.js<% } else { %>count.js<% } %>',
+        dataType:'script',
+        timeout: 3000
+      })
+      .fail(function(jqxhr, settings, exception) {
+        loading.innerHTML='<font style="color:LightGray;">👉 评论需翻墙！</font>';
+      });
     }
   })();
 </script>
