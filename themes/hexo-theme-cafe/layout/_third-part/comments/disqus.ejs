@@ -6,20 +6,13 @@
   <% } %>
   (function(){
     if(document.getElementById("disqus_thread")!=null){
-      document.getElementById("disqus_thread").setAttribute("align","center");
-
-      var loading = document.createElement('div');
-      loading.setAttribute("style","height:17px;");
-      loading.innerHTML = '<img id="loading_gif" src="/images/comment_loading.gif"/>';
-      document.getElementById("disqus_thread").appendChild(loading);
-
       $.ajax({
         url:'//' + disqus_shortname + '.disqus.com/<% if (page.comments) { %>embed.js<% } else { %>count.js<% } %>',
         dataType:'script',
         timeout: 3000
       })
       .fail(function(jqxhr, settings, exception) {
-        loading.innerHTML='<font style="color:LightGray;">👉 评论需翻墙！</font>';
+        document.getElementById("disqus_thread").innerHTML='<font style="color:LightGray;">👉 评论需翻墙！</font>';
       });
     }
   })();

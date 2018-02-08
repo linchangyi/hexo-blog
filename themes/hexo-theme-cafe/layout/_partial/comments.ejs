@@ -6,14 +6,13 @@
       </div>
       <% } %>
      <% if  (theme.disqus_shortname){ %>
-    <section id="comments">
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
+
+      <div id="disqus_thread" align="center">
+        <div style="height:17px">
+            <img src="/images/comment_loading.gif"/>
+        </div>
       </div>
-      </section>
+
       <% } %>
        <% if  (theme.gentie_productKey){ %>
       <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
