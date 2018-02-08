@@ -15,7 +15,7 @@
       document.getElementById("disqus_thread").appendChild(loading);
 
       $.ajax({
-        url:'//' + disqus_shortname + '.disqus.com/<% if (page.comments) { %>embed.js<% } else { %>count.js<% } %>',
+        url:'https://' + disqus_shortname + '.disqus.com/<% if (page.comments) { %>embed.js<% } else { %>count.js<% } %>',
         timeout: 2000,
         success: function(data){
           var dsq = document.createElement('script');
