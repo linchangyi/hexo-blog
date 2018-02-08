@@ -11,22 +11,18 @@
       var loading = document.createElement('div');
       loading.setAttribute("style","height:17px;");
       loading.innerHTML = '<img id="loading_gif" src="/images/comment_loading.gif"/>';
-
       document.getElementById("disqus_thread").appendChild(loading);
 
-      $.ajax({
-        url:'https://' + disqus_shortname + '.disqus.com/<% if (page.comments) { %>embed.js<% } else { %>count.js<% } %>',
-        timeout: 2000,
-        success: function(data){
-          var dsq = document.createElement('script');
-          dsq.type = 'text/javascript';
-          dsp.innerHTML=data;
-          (document.getElementsByTagName('body')[0]).appendChild(dsq);
-        },
-        error: function(){
-          loading.innerHTML='<font style="color:LightGray;">👉 评论请翻墙！</font>';
-        }
-      });
+      setTimeout(function(){
+        loading.innerHTML='<font style="color:LightGray;">👉 评论请翻墙！</font>';
+      },2000);
+
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/<% if (page.comments) { %>embed.js<% } else { %>count.js<% } %>';
+      document.getElementsByTagName('body')[0].appendChild(dsq);
+
     }
   })();
 </script>
