@@ -1,9 +1,0 @@
-diff a/themes/hexo-theme-cafe/layout/_partial/footer.ejs b/themes/hexo-theme-cafe/layout/_partial/footer.ejs	(rejected hunks)
-@@ -4,7 +4,6 @@
-   <% } %>
-   <div class="outer">
-     <div id="footer-left">
--      <%= __('theme_by') %> <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
-       &copy; 2014 - <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %>
-       <% if (config.hosted_by_coding_pages){ %>
-         &nbsp;|&nbsp;Hosted by Coding Pages
