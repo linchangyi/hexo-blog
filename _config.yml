@@ -4,7 +4,7 @@
 
 # Site
 title: 十万嬉皮
-subtitle: Lincy's Blog
+# subtitle: Lincy's Blog
 description:
 author: Lincy
 language: zh-CN
@@ -63,7 +63,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: hexo-theme-cafe
+theme: indigo
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
