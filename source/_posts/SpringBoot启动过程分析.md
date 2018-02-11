@@ -8,7 +8,6 @@ categories: 技术
 ```java
 @SpringBootApplication
 public class SpringbootstarterApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootstarterApplication.class, args);
 	}
