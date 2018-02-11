@@ -4,7 +4,7 @@ date: 2018-02-09 11:49:43
 tags: springboot
 categories: 技术
 ---
-# 入口：
+# 入口
 ```java
 @SpringBootApplication
 public class SpringbootstarterApplication {
@@ -15,7 +15,7 @@ public class SpringbootstarterApplication {
 }
 ```
 <!-- more -->
-# 初始化：
+# 初始化
 ```java
 private void initialize(Object[] sources) {
     //sources为入口的传入的class
@@ -35,7 +35,7 @@ private void initialize(Object[] sources) {
 加载的初始化器和监听器如下：
 ![](SpringBoot启动过程分析/1.PNG)
 
-# 运行：
+# 运行
 ```java
 public ConfigurableApplicationContext run(String... args) {
     StopWatch stopWatch = new StopWatch();
