@@ -1,1 +1,1 @@
-<img src="timg.jpg"/>
+<img src="cup-of-java.jpg"/>
