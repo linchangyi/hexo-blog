@@ -1,7 +1,9 @@
 ---
 title: zookeeper学习笔记（2）Paxos Made Simple【翻译】
 date: 2018-01-18 16:50:04
-tags: zookeeper学习笔记
+tags: 
+    - zookeeper
+    - 笔记
 categories: 技术
 ---
 > 原文 [Paxos Made Simple](https://lamport.azurewebsites.net/pubs/paxos-simple.pdf)

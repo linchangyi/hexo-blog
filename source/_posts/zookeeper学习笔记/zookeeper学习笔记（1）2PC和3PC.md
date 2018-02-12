@@ -1,7 +1,9 @@
 ---
 title: zookeeper学习笔记（1）2PC和3PC
 date: 2018-01-18 11:02:33
-tags: zookeeper学习笔记
+tags:
+    - zookeeper
+    - 笔记
 categories: 技术
 ---
 <img src="zookeeper学习笔记（1）2PC和3PC/书.PNG" width="60%">
