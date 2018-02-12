@@ -1,1 +1,1 @@
-<img src="timg.jpg" width="50%"/>
+<img src="timg.jpg"/>
