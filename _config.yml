@@ -85,3 +85,12 @@ sitemap:
   path: sitemap.xml
 baidusitemap:
   path: baidusitemap.xml
+
+imagemin:
+  enable     : true
+  interlaced : false
+  multipass  : false
+  optimizationLevel: 2
+  pngquant   : false
+  progressive: false
+
