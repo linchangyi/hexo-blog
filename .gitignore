@@ -7,4 +7,4 @@ themes/cafe/node_modules/
 public/
 .deploy*/
 .vscode/
-BB.code-workspace
+*.code-workspace
